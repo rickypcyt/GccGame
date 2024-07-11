@@ -1,6 +1,7 @@
-CMakeFiles/My3DGame.dir/src/main.cpp.o: \
- /home/ricky/Documents/Codeo2/GCCGAME/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/GL/glew.h \
+CMakeFiles/My3DGame.dir/src/render.cpp.o: \
+ /home/ricky/Documents/Codeo2/GCCGAME/src/render.cpp \
+ /usr/include/stdc-predef.h \
+ /home/ricky/Documents/Codeo2/GCCGAME/src/render.h /usr/include/GL/glew.h \
  /usr/include/c++/14.1.1/cstddef \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -141,5 +142,4 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/locale_facets.tcc \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
- /usr/include/c++/14.1.1/bits/istream.tcc \
- /home/ricky/Documents/Codeo2/GCCGAME/src/../include/renderer.h
+ /usr/include/c++/14.1.1/bits/istream.tcc

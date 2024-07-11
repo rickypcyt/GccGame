@@ -81,12 +81,12 @@ clean: CMakeFiles/My3DGame.dir/clean
 CMakeFiles/My3DGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ricky/Documents/Codeo2/GCCGAME/build/CMakeFiles --progress-num=1,2 "Built target My3DGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ricky/Documents/Codeo2/GCCGAME/build/CMakeFiles --progress-num=1,2,3 "Built target My3DGame"
 .PHONY : CMakeFiles/My3DGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/My3DGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ricky/Documents/Codeo2/GCCGAME/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ricky/Documents/Codeo2/GCCGAME/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/My3DGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ricky/Documents/Codeo2/GCCGAME/build/CMakeFiles 0
 .PHONY : CMakeFiles/My3DGame.dir/rule

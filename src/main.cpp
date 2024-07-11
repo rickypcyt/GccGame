@@ -1,7 +1,9 @@
+// main.cpp
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <cstring> // Para std::strlen
+#include "../include/renderer.h" // Incluimos el archivo de encabezado donde se define render()
 
 // Dimensiones de la ventana
 const GLint WIDTH = 800, HEIGHT = 600;
@@ -24,17 +26,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         boxPosX += moveSpeed;
     else if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GLFW_TRUE);
-}
-
-void render() {
-    // Dibujar el piso
-    glBegin(GL_QUADS);
-    glColor3f(0.5f, 0.5f, 0.5f);    // Color gris
-    glVertex2f(-1.0f, 0.0f);        // Vértice izquierdo
-    glVertex2f(1.0f, 0.0f);         // Vértice derecho
-    glVertex2f(1.0f, -0.1f);        // Vértice superior derecho
-    glVertex2f(-1.0f, -0.1f);       // Vértice superior izquierdo
-    glEnd();
 }
 
 int main() {
@@ -64,13 +55,16 @@ int main() {
     // Establecer la función de callback para las teclas
     glfwSetKeyCallback(window, key_callback);
 
+    // Configurar OpenGL para el renderizado 3D
+    glEnable(GL_DEPTH_TEST);
+
     // Bucle principal de renderizado
     while (!glfwWindowShouldClose(window)) {
         // Renderizar
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // Llamar a la función de renderizado
-        render();
+        // Llamar a la función de renderizado desde el archivo separado
+        render(window);
 
         // Intercambiar los buffers
         glfwSwapBuffers(window);
