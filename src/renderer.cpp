@@ -1,77 +1,98 @@
-// render.cpp
-
 #include "../include/renderer.h"
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-void render(GLFWwindow* window) {
-    // Configuración de materiales y luz (ejemplo)
-    GLfloat mat_ambient[] = {0.7f, 0.7f, 0.7f, 1.0f};
-    GLfloat mat_diffuse[] = {0.5f, 0.5f, 0.5f, 1.0f};
-    GLfloat mat_specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
-    GLfloat mat_shininess[] = {50.0f};
-    
-    GLfloat light_position[] = {2.0f, 6.0f, 3.0f, 0.0f};
-    GLfloat light_intensity[] = {0.7f, 0.7f, 0.7f, 1.0f};
+GLuint VBO, VAO, shaderProgram;
 
-    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+// Shader sources
+const char* vertexShaderSource = R"glsl(
+    #version 330 core
+    layout (location = 0) in vec3 aPos;
+    void main() {
+        gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
+    }
+)glsl";
 
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_intensity);
+const char* fragmentShaderSource = R"glsl(
+    #version 330 core
+    out vec4 FragColor;
+    void main() {
+        FragColor = vec4(1.0, 0.5, 0.2, 1.0); // Color naranja
+    }
+)glsl";
 
-    // Configuración de la proyección y la vista (ejemplo)
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    double winlet = 1.0;
-    glOrtho(-winlet * 64 / 48, winlet * 64 / 48.0, -winlet * 64 / 48, winlet * 64 / 48, 0.6, 100.0);
+void setupShaders() {
+    // Compilar shaders
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
+    glCompileShader(vertexShader);
 
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    gluLookAt(2.3, 1.38, 2.0, 0.0, 0.25, 0.0, 0.0, 1.0, 0.0);
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
+    glCompileShader(fragmentShader);
 
-    // Limpieza de buffers y configuración inicial
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    // Vincular shaders
+    shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
 
-    // Renderización de objetos
-    glPushMatrix();
-        glTranslated(0.0, 0.0, -1.0); // Mover el triángulo hacia atrás para que sea visible
-
-        // Renderizar un triángulo simple
-        glBegin(GL_TRIANGLES);
-            glColor3f(1.0f, 0.0f, 0.0f);   // Color rojo
-            glVertex3f(0.0f, 0.5f, 0.0f);  // Vértice superior
-            glColor3f(0.0f, 1.0f, 0.0f);   // Color verde
-            glVertex3f(-0.5f, -0.5f, 0.0f); // Vértice inferior izquierdo
-            glColor3f(0.0f, 0.0f, 1.0f);   // Color azul
-            glVertex3f(0.5f, -0.5f, 0.0f);  // Vértice inferior derecho
-        glEnd();
-
-        // Habilitar texturas y configurar la textura (opcional, según tu aplicación)
-        // glEnable(GL_TEXTURE_2D);
-        // GLuint textureID = loadTexture("path_to_your_texture.png"); // Cargar tu textura aquí
-        // glBindTexture(GL_TEXTURE_2D, textureID);
-        // glBegin(GL_QUADS);
-        //     // Renderizar el cubo con textura
-        // glEnd();
-        // Desactivar texturas después de su uso
-        // glDisable(GL_TEXTURE_2D);
-
-    glPopMatrix();
-    
-    // Finalización y renderizado de la escena
-    glFlush();
+    // Liberar shaders
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
 }
 
-GLuint loadTexture(const char* path) {
-    GLuint textureID;
-    glGenTextures(1, &textureID);
+void createSquare() {
+    float vertices[] = {
+        -0.5f, -0.5f, 0.0f,  // Abajo izquierda
+         0.5f, -0.5f, 0.0f,  // Abajo derecha
+         0.5f,  0.5f, 0.0f,  // Arriba derecha
+        -0.5f,  0.5f, 0.0f   // Arriba izquierda
+    };
 
-    // Cargar la textura
-    // Aquí implementa tu lógica para cargar la textura desde un archivo
+    unsigned int indices[] = {
+        0, 1, 2,   // Primer triángulo
+        2, 3, 0    // Segundo triángulo
+    };
 
-    return textureID;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    // Configurar atributos de vértice
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // Configurar el buffer de índices
+    GLuint EBO;
+    glGenBuffers(1, &EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    // Desvincular VBO y VAO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
+
+void renderSquare(GLFWwindow* window, float posX, float posY) {
+    glUseProgram(shaderProgram);
+
+    // Transformación para mover el cuadrado
+    glm::mat4 model = glm::mat4(1.0f);  // Inicializar como matriz identidad
+    model = glm::translate(model, glm::vec3(posX, posY, 0.0f));
+
+    // Obtener la ubicación de la matriz de modelo en el shader
+    unsigned int modelLoc = glGetUniformLocation(shaderProgram, "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
+    // Dibujar el cuadrado
+    glBindVertexArray(VAO);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glBindVertexArray(0);
+}
+
