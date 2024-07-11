@@ -10,6 +10,7 @@ find_package(PkgConfig REQUIRED)
 add_executable(My3DGame
     src/main.cpp
     src/renderer.cpp
+    src/movement.cpp
     # Otros archivos fuente si los tienes
 )
 

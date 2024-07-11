@@ -142,4 +142,5 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: \
  /usr/include/c++/14.1.1/bits/basic_ios.tcc \
  /usr/include/c++/14.1.1/bits/ostream.tcc /usr/include/c++/14.1.1/istream \
  /usr/include/c++/14.1.1/bits/istream.tcc \
- /home/ricky/Documents/Codeo2/GCCGAME/src/../include/renderer.h
+ /home/ricky/Documents/Codeo2/GCCGAME/src/../include/renderer.h \
+ /home/ricky/Documents/Codeo2/GCCGAME/src/../include/movement.h

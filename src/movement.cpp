@@ -1,10 +1,9 @@
 // movement.cpp
 #include <GLFW/glfw3.h>
-#include "movement.h"
+#include "../include/movement.h"
 
 GLfloat moveSpeedX = 0.0f;
 GLfloat moveSpeedY = 0.0f;
-const GLfloat moveSpeed = 5.5f;
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
     if (key == GLFW_KEY_W) {

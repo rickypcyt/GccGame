@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/movement.o: src/movement.cpp.o
+.PHONY : src/movement.o
+
+# target to build an object file
+src/movement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/src/movement.cpp.o
+.PHONY : src/movement.cpp.o
+
+src/movement.i: src/movement.cpp.i
+.PHONY : src/movement.i
+
+# target to preprocess a source file
+src/movement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/src/movement.cpp.i
+.PHONY : src/movement.cpp.i
+
+src/movement.s: src/movement.cpp.s
+.PHONY : src/movement.s
+
+# target to generate assembly for a file
+src/movement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/My3DGame.dir/build.make CMakeFiles/My3DGame.dir/src/movement.cpp.s
+.PHONY : src/movement.cpp.s
+
 src/renderer.o: src/renderer.cpp.o
 .PHONY : src/renderer.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/movement.o"
+	@echo "... src/movement.i"
+	@echo "... src/movement.s"
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
