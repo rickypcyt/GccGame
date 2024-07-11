@@ -1,12 +1,11 @@
 // render.h
-
 #ifndef RENDER_H
 #define RENDER_H
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+extern GLfloat boxPosX;
+extern GLfloat boxPosY;
+extern GLfloat rotationAngle;
 
-void render(GLFWwindow* window);
-GLuint loadTexture(const char* path);
+void render();
 
 #endif // RENDER_H

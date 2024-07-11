@@ -1,13 +1,11 @@
+// main.cpp
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <cmath>
+#include "../include/renderer.h"
 
 const GLint WIDTH = 800, HEIGHT = 600;
 
-GLfloat boxPosX = 0.0f;
-GLfloat boxPosY = 0.0f;
-GLfloat rotationAngle = 0.0f;
 GLfloat moveSpeedX = 0.0f;
 GLfloat moveSpeedY = 0.0f;
 const GLfloat moveSpeed = 0.1f;
@@ -36,62 +34,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     } else if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
     }
-}
-
-void render() {
-    glPushMatrix();
-    glTranslatef(boxPosX, boxPosY, 0.0f);
-    glRotatef(rotationAngle, 1.0f, 0.0f, 0.0f); // Rotación alrededor del eje X
-    glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f); // Rotación alrededor del eje Y
-
-    // Draw Cube
-    glBegin(GL_QUADS);
-
-    // Front face
-    glColor3f(1.0f, 0.0f, 0.0f); // Red
-    glVertex3f(-0.5f, -0.5f, 0.5f);
-    glVertex3f( 0.5f, -0.5f, 0.5f);
-    glVertex3f( 0.5f,  0.5f, 0.5f);
-    glVertex3f(-0.5f,  0.5f, 0.5f);
-
-    // Back face
-    glColor3f(0.0f, 1.0f, 0.0f); // Green
-    glVertex3f(-0.5f, -0.5f, -0.5f);
-    glVertex3f(-0.5f,  0.5f, -0.5f);
-    glVertex3f( 0.5f,  0.5f, -0.5f);
-    glVertex3f( 0.5f, -0.5f, -0.5f);
-
-    // Left face
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue
-    glVertex3f(-0.5f, -0.5f,  0.5f);
-    glVertex3f(-0.5f,  0.5f,  0.5f);
-    glVertex3f(-0.5f,  0.5f, -0.5f);
-    glVertex3f(-0.5f, -0.5f, -0.5f);
-
-    // Right face
-    glColor3f(1.0f, 1.0f, 0.0f); // Yellow
-    glVertex3f( 0.5f, -0.5f, -0.5f);
-    glVertex3f( 0.5f,  0.5f, -0.5f);
-    glVertex3f( 0.5f,  0.5f,  0.5f);
-    glVertex3f( 0.5f, -0.5f,  0.5f);
-
-    // Top face
-    glColor3f(1.0f, 0.0f, 1.0f); // Magenta
-    glVertex3f(-0.5f,  0.5f,  0.5f);
-    glVertex3f( 0.5f,  0.5f,  0.5f);
-    glVertex3f( 0.5f,  0.5f, -0.5f);
-    glVertex3f(-0.5f,  0.5f, -0.5f);
-
-    // Bottom face
-    glColor3f(0.0f, 1.0f, 1.0f); // Cyan
-    glVertex3f(-0.5f, -0.5f, -0.5f);
-    glVertex3f( 0.5f, -0.5f, -0.5f);
-    glVertex3f( 0.5f, -0.5f,  0.5f);
-    glVertex3f(-0.5f, -0.5f,  0.5f);
-
-    glEnd();
-
-    glPopMatrix();
 }
 
 int main() {
