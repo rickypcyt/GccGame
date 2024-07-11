@@ -8,19 +8,34 @@ const GLint WIDTH = 800, HEIGHT = 600;
 GLfloat boxPosX = 0.0f;
 GLfloat boxPosY = 0.0f;
 GLfloat rotationAngle = 0.0f;
+GLfloat moveSpeedX = 0.0f;
+GLfloat moveSpeedY = 0.0f;
 const GLfloat moveSpeed = 0.1f;
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    if (key == GLFW_KEY_W && (action == GLFW_PRESS || action == GLFW_REPEAT))
-        boxPosY += moveSpeed;
-    else if (key == GLFW_KEY_S && (action == GLFW_PRESS || action == GLFW_REPEAT))
-        boxPosY -= moveSpeed;
-    else if (key == GLFW_KEY_A && (action == GLFW_PRESS || action == GLFW_REPEAT))
-        boxPosX -= moveSpeed;
-    else if (key == GLFW_KEY_D && (action == GLFW_PRESS || action == GLFW_REPEAT))
-        boxPosX += moveSpeed;
-    else if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+    if (key == GLFW_KEY_W) {
+        if (action == GLFW_PRESS || action == GLFW_REPEAT)
+            moveSpeedY = moveSpeed;
+        else
+            moveSpeedY = 0.0f;
+    } else if (key == GLFW_KEY_S) {
+        if (action == GLFW_PRESS || action == GLFW_REPEAT)
+            moveSpeedY = -moveSpeed;
+        else
+            moveSpeedY = 0.0f;
+    } else if (key == GLFW_KEY_A) {
+        if (action == GLFW_PRESS || action == GLFW_REPEAT)
+            moveSpeedX = -moveSpeed;
+        else
+            moveSpeedX = 0.0f;
+    } else if (key == GLFW_KEY_D) {
+        if (action == GLFW_PRESS || action == GLFW_REPEAT)
+            moveSpeedX = moveSpeed;
+        else
+            moveSpeedX = 0.0f;
+    } else if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, GLFW_TRUE);
+    }
 }
 
 void render() {
@@ -109,6 +124,10 @@ int main() {
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // Movimiento diagonal
+        boxPosX += moveSpeedX;
+        boxPosY += moveSpeedY;
 
         // Set up projection matrix
         glMatrixMode(GL_PROJECTION);
