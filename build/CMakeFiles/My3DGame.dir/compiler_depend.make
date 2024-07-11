@@ -19,18 +19,9 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/bits/errno.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
-  /usr/include/bits/flt-eval-method.h \
-  /usr/include/bits/fp-fast.h \
-  /usr/include/bits/fp-logb.h \
-  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
-  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
-  /usr/include/bits/math-vector.h \
-  /usr/include/bits/mathcalls-helper-functions.h \
-  /usr/include/bits/mathcalls-narrow.h \
-  /usr/include/bits/mathcalls.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -122,7 +113,6 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/c++/14.1.1/bits/range_access.h \
   /usr/include/c++/14.1.1/bits/refwrap.h \
   /usr/include/c++/14.1.1/bits/requires_hosted.h \
-  /usr/include/c++/14.1.1/bits/specfun.h \
   /usr/include/c++/14.1.1/bits/std_abs.h \
   /usr/include/c++/14.1.1/bits/stl_algobase.h \
   /usr/include/c++/14.1.1/bits/stl_construct.h \
@@ -142,7 +132,6 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/c++/14.1.1/cctype \
   /usr/include/c++/14.1.1/cerrno \
   /usr/include/c++/14.1.1/clocale \
-  /usr/include/c++/14.1.1/cmath \
   /usr/include/c++/14.1.1/concepts \
   /usr/include/c++/14.1.1/cstddef \
   /usr/include/c++/14.1.1/cstdint \
@@ -163,7 +152,6 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/c++/14.1.1/iosfwd \
   /usr/include/c++/14.1.1/iostream \
   /usr/include/c++/14.1.1/istream \
-  /usr/include/c++/14.1.1/limits \
   /usr/include/c++/14.1.1/new \
   /usr/include/c++/14.1.1/ostream \
   /usr/include/c++/14.1.1/pstl/pstl_config.h \
@@ -172,18 +160,6 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/c++/14.1.1/string \
   /usr/include/c++/14.1.1/string_view \
   /usr/include/c++/14.1.1/system_error \
-  /usr/include/c++/14.1.1/tr1/bessel_function.tcc \
-  /usr/include/c++/14.1.1/tr1/beta_function.tcc \
-  /usr/include/c++/14.1.1/tr1/ell_integral.tcc \
-  /usr/include/c++/14.1.1/tr1/exp_integral.tcc \
-  /usr/include/c++/14.1.1/tr1/gamma.tcc \
-  /usr/include/c++/14.1.1/tr1/hypergeometric.tcc \
-  /usr/include/c++/14.1.1/tr1/legendre_function.tcc \
-  /usr/include/c++/14.1.1/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/14.1.1/tr1/poly_hermite.tcc \
-  /usr/include/c++/14.1.1/tr1/poly_laguerre.tcc \
-  /usr/include/c++/14.1.1/tr1/riemann_zeta.tcc \
-  /usr/include/c++/14.1.1/tr1/special_function_util.h \
   /usr/include/c++/14.1.1/tuple \
   /usr/include/c++/14.1.1/type_traits \
   /usr/include/c++/14.1.1/typeinfo \
@@ -207,7 +183,6 @@ CMakeFiles/My3DGame.dir/src/main.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME/src
   /usr/include/gnu/stubs.h \
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
-  /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -262,6 +237,8 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/time.h:
 
+/usr/include/sys/select.h:
+
 /usr/include/stdlib.h:
 
 /usr/include/stdio.h:
@@ -282,6 +259,8 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
+/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++config.h:
@@ -292,35 +271,11 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/type_traits:
 
-/usr/include/c++/14.1.1/tr1/special_function_util.h:
-
-/usr/include/c++/14.1.1/tr1/riemann_zeta.tcc:
-
-/usr/include/sys/select.h:
-
-/usr/include/c++/14.1.1/tr1/poly_hermite.tcc:
-
-/usr/include/c++/14.1.1/tr1/modified_bessel_func.tcc:
-
-/usr/include/c++/14.1.1/tr1/hypergeometric.tcc:
-
 /usr/include/c++/14.1.1/tuple:
-
-/usr/include/c++/14.1.1/tr1/gamma.tcc:
-
-/usr/include/c++/14.1.1/tr1/exp_integral.tcc:
-
-/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
-
-/usr/include/c++/14.1.1/tr1/ell_integral.tcc:
-
-/usr/include/c++/14.1.1/tr1/bessel_function.tcc:
 
 /usr/include/c++/14.1.1/string_view:
 
 /usr/include/c++/14.1.1/streambuf:
-
-/usr/include/c++/14.1.1/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/14.1.1/pstl/pstl_config.h:
 
@@ -338,6 +293,8 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/iosfwd:
 
+/usr/include/c++/14.1.1/ios:
+
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
 /usr/include/c++/14.1.1/initializer_list:
@@ -352,33 +309,33 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/cwchar:
 
-/usr/include/c++/14.1.1/cmath:
-
-/usr/include/math.h:
+/usr/include/c++/14.1.1/cstdio:
 
 /usr/include/c++/14.1.1/cerrno:
 
 /usr/include/c++/14.1.1/bits/version.h:
 
-/usr/include/c++/14.1.1/cstddef:
+/usr/include/c++/14.1.1/string:
 
-/usr/include/c++/14.1.1/bits/utility.h:
+/usr/include/bits/types/struct_timespec.h:
 
-/usr/include/c++/14.1.1/system_error:
+/usr/include/bits/types/struct_sched_param.h:
 
-/usr/include/c++/14.1.1/bits/uses_allocator.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h:
 
-/usr/include/c++/14.1.1/bits/string_view.tcc:
+/usr/include/ctype.h:
 
-/usr/include/c++/14.1.1/bits/streambuf_iterator.h:
+/usr/include/bits/waitflags.h:
 
-/usr/include/c++/14.1.1/bits/stl_pair.h:
+/usr/include/c++/14.1.1/cstdint:
 
-/usr/include/c++/14.1.1/bits/stl_iterator_base_types.h:
+/usr/include/bits/types/struct_FILE.h:
 
-/usr/include/c++/14.1.1/ostream:
+/usr/include/c++/14.1.1/bits/exception_defines.h:
 
-/usr/include/c++/14.1.1/bits/stl_iterator_base_funcs.h:
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/c++/14.1.1/bits/exception.h:
 
 /usr/include/bits/sched.h:
 
@@ -386,9 +343,13 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/bits/atomic_wide_counter.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h:
+
+/usr/include/bits/types/__locale_t.h:
+
 /usr/include/bits/types/__FILE.h:
 
-/usr/include/c++/14.1.1/bits/specfun.h:
+/usr/include/bits/types/FILE.h:
 
 /usr/include/sys/cdefs.h:
 
@@ -400,49 +361,25 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/bits/istream.tcc:
 
+/usr/include/bits/stdint-intn.h:
+
 /usr/include/asm/errno.h:
 
 /usr/include/bits/endian.h:
 
 /usr/include/c++/14.1.1/bits/memoryfwd.h:
 
-/usr/include/c++/14.1.1/limits:
-
-/usr/include/c++/14.1.1/cstdio:
-
-/usr/include/bits/mathcalls-helper-functions.h:
-
 /usr/include/bits/types/time_t.h:
 
 /usr/include/c++/14.1.1/bits/move.h:
 
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/c++/14.1.1/bits/predefined_ops.h:
+
 /usr/include/bits/types/struct_timeval.h:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/bits/setjmp.h:
-
-/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
-
-/usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/c++/14.1.1/bits/range_access.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
-
-/usr/include/c++/14.1.1/bits/stl_algobase.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -456,6 +393,16 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/bits/uintn-identity.h:
 
+/usr/include/c++/14.1.1/cstddef:
+
+/usr/include/c++/14.1.1/bits/utility.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/c++/14.1.1/debug/debug.h:
+
+/usr/include/GL/gl.h:
+
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/time64.h:
@@ -468,7 +415,23 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/bits/time.h:
 
-/usr/include/bits/math-vector.h:
+/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
+
+/usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/c++/14.1.1/bits/range_access.h:
+
+/usr/include/c++/14.1.1/system_error:
+
+/usr/include/c++/14.1.1/bits/uses_allocator.h:
+
+/usr/include/c++/14.1.1/bits/string_view.tcc:
+
+/usr/include/asm-generic/errno.h:
 
 /usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
@@ -476,37 +439,7 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/bits/locale_facets.h:
 
-/usr/include/c++/14.1.1/debug/debug.h:
-
-/usr/include/GL/gl.h:
-
-/usr/include/bits/long-double.h:
-
-/usr/include/c++/14.1.1/cstdlib:
-
-/usr/include/bits/stdint-least.h:
-
-/usr/include/c++/14.1.1/backward/binders.h:
-
-/usr/include/c++/14.1.1/bits/stringfwd.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/14.1.1/bits/charconv.h:
-
 /usr/include/bits/types/__sigset_t.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/c++/14.1.1/bits/locale_classes.tcc:
-
-/usr/include/c++/14.1.1/ext/numeric_traits.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/home/ricky/Documents/Codeo2/GCCGAME/include/renderer.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/bits/types.h:
 
@@ -516,63 +449,19 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/bits/endianness.h:
 
+/usr/include/bits/struct_rwlock.h:
+
+/usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/14.1.1/bits/uses_allocator_args.h:
+
 /home/ricky/Documents/Codeo2/GCCGAME/src/main.cpp:
 
 /usr/include/c++/14.1.1/bits/allocator.h:
 
-/usr/include/c++/14.1.1/bits/streambuf.tcc:
-
-/usr/include/c++/14.1.1/bits/requires_hosted.h:
-
-/usr/include/c++/14.1.1/bits/stl_iterator.h:
-
 /home/ricky/Documents/Codeo2/GCCGAME/src/renderer.cpp:
 
 /usr/include/bits/locale.h:
-
-/usr/include/wctype.h:
-
-/usr/include/bits/timex.h:
-
-/usr/include/bits/errno.h:
-
-/usr/include/c++/14.1.1/bits/invoke.h:
-
-/usr/include/bits/floatn.h:
-
-/usr/include/c++/14.1.1/bits/functional_hash.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdarg.h:
-
-/usr/include/bits/types/__locale_t.h:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/include/bits/flt-eval-method.h:
-
-/usr/include/bits/fp-fast.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/bits/fp-logb.h:
-
-/usr/include/bits/iscanonical.h:
-
-/usr/include/GL/glew.h:
-
-/usr/include/c++/14.1.1/tr1/beta_function.tcc:
-
-/usr/include/bits/libc-header-start.h:
-
-/usr/include/c++/14.1.1/ios:
-
-/usr/include/bits/mathcalls-narrow.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/c++/14.1.1/bits/exception.h:
 
 /usr/include/bits/types/mbstate_t.h:
 
@@ -580,37 +469,55 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/bits/std_abs.h:
 
-/usr/include/bits/types/sigset_t.h:
+/usr/include/c++/14.1.1/bits/invoke.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/bits/floatn.h:
 
-/usr/include/c++/14.1.1/bits/predefined_ops.h:
+/usr/include/c++/14.1.1/bits/functional_hash.h:
 
-/usr/include/c++/14.1.1/tr1/legendre_function.tcc:
+/usr/include/bits/pthreadtypes.h:
 
-/usr/include/c++/14.1.1/cstdint:
+/usr/include/GL/glew.h:
 
-/usr/include/bits/types/struct_FILE.h:
+/usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/14.1.1/bits/exception_defines.h:
+/usr/include/wctype.h:
 
-/usr/include/c++/14.1.1/bits/uses_allocator_args.h:
+/usr/include/bits/errno.h:
 
-/usr/include/bits/struct_rwlock.h:
+/usr/include/bits/timex.h:
 
-/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/bits/types/cookie_io_functions_t.h:
 
-/usr/include/bits/types/struct_sched_param.h:
+/usr/include/c++/14.1.1/bits/locale_classes.tcc:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include/stdint.h:
+/usr/include/c++/14.1.1/bits/stl_pair.h:
 
-/usr/include/ctype.h:
+/home/ricky/Documents/Codeo2/GCCGAME/include/renderer.h:
 
-/usr/include/bits/waitflags.h:
+/usr/include/c++/14.1.1/ext/numeric_traits.h:
 
-/usr/include/c++/14.1.1/string:
+/usr/include/bits/pthread_stack_min-dynamic.h:
 
-/usr/include/bits/types/struct_timespec.h:
+/usr/include/gnu/stubs.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/c++/14.1.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
+
+/usr/include/c++/14.1.1/bits/stl_algobase.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/c++/14.1.1/bits/charconv.h:
+
+/usr/include/c++/14.1.1/cstdlib:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/c++/14.1.1/backward/binders.h:
 
 /usr/include/bits/types/struct_tm.h:
 
@@ -621,6 +528,8 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 /usr/include/c++/14.1.1/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/14.1.1/bits/memory_resource.h:
+
+/usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/types/wint_t.h:
 
@@ -651,8 +560,6 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/__fpos_t.h:
-
-/usr/include/bits/mathcalls.h:
 
 /usr/include/c++/14.1.1/bits/exception_ptr.h:
 
@@ -704,6 +611,24 @@ CMakeFiles/My3DGame.dir/src/renderer.cpp.o: /home/ricky/Documents/Codeo2/GCCGAME
 
 /usr/include/c++/14.1.1/bits/refwrap.h:
 
+/usr/include/c++/14.1.1/ostream:
+
+/usr/include/c++/14.1.1/bits/stl_iterator_base_funcs.h:
+
 /usr/include/c++/14.1.1/bits/stl_construct.h:
 
 /usr/include/c++/14.1.1/bits/stl_function.h:
+
+/usr/include/c++/14.1.1/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/14.1.1/bits/stl_iterator.h:
+
+/usr/include/c++/14.1.1/bits/requires_hosted.h:
+
+/usr/include/c++/14.1.1/bits/streambuf.tcc:
+
+/usr/include/c++/14.1.1/bits/streambuf_iterator.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/14.1.1/bits/stringfwd.h:
