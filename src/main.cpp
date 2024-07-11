@@ -7,10 +7,10 @@ const GLint WIDTH = 800, HEIGHT = 600;
 
 GLfloat boxPosX = 0.0f;
 GLfloat boxPosY = 0.0f;
+GLfloat rotationAngle = 0.0f;
+const GLfloat moveSpeed = 0.1f;
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    const GLfloat moveSpeed = 0.1f;
-
     if (key == GLFW_KEY_W && (action == GLFW_PRESS || action == GLFW_REPEAT))
         boxPosY += moveSpeed;
     else if (key == GLFW_KEY_S && (action == GLFW_PRESS || action == GLFW_REPEAT))
@@ -26,6 +26,8 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 void render() {
     glPushMatrix();
     glTranslatef(boxPosX, boxPosY, 0.0f);
+    glRotatef(rotationAngle, 1.0f, 0.0f, 0.0f); // Rotación alrededor del eje X
+    glRotatef(rotationAngle, 0.0f, 1.0f, 0.0f); // Rotación alrededor del eje Y
 
     // Draw Cube
     glBegin(GL_QUADS);
@@ -83,6 +85,8 @@ int main() {
         return -1;
     }
 
+    glfwWindowHint(GLFW_SAMPLES, 4); // 4 muestras por píxel para multisampling
+
     GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "MyOpenGLGame", NULL, NULL);
     if (!window) {
         std::cerr << "Error al crear la ventana GLFW\n";
@@ -91,6 +95,8 @@ int main() {
     }
 
     glfwMakeContextCurrent(window);
+
+    glEnable(GL_MULTISAMPLE); // Habilitar multisampling
 
     if (glewInit() != GLEW_OK) {
         std::cerr << "Error al inicializar GLEW\n";
@@ -120,6 +126,9 @@ int main() {
 
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        // Incrementa el ángulo de rotación para que el cubo gire continuamente
+        rotationAngle += 0.5f;
     }
 
     glfwTerminate();
